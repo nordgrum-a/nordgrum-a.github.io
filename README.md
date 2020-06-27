@@ -1,1 +1,0 @@
-# nordgrum-a.github.io
