@@ -9,3 +9,5 @@ function ciiv(){var wh = $window.height(); var wtp = $window.scrollTop(); var wb
 $window.on('scroll resize', ciiv); $window.trigger('scroll');
 
 function audio() {var audio = document.getElementById("audio"); audio.play(); audio.volume = 0.375;}
+
+function share() {if (navigator.share) {navigator.share({title: document.title, text: document.querySelector("meta[name='description']").getAttribute("content"), url: window.location.href}).then(() => {console.log('Ready!');}) .catch(console.error);} else {console.log('Error...');}}
