@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url><loc>https://ad.mordwerg.com/</loc><lastmod>2020-06-27</lastmod><xhtml:link rel="alternate" hreflang="en-us" href="https://ad.mordwerg.com/en-us"/></url>
-<url><loc>https://ad.mordwerg.com/ru-ru/id1</loc><lastmod>2020-06-27</lastmod></url>
+<url><loc>https://electro-point.net/</loc><lastmod>2020-09-10</lastmod></url>
+<url><loc>https://electro-point.net/index</loc><lastmod>2020-09-10</lastmod></url>
+<url><loc>https://electro-point.net/about</loc><lastmod>2020-09-10</lastmod></url>
+<url><loc>https://electro-point.net/contact</loc><lastmod>2020-09-10</lastmod></url>
+<url><loc>https://electro-point.net/shop</loc><lastmod>2020-09-10</lastmod></url>
+<url><loc>https://electro-point.net/blog</loc><lastmod>2020-09-10</lastmod></url>
 </urlset>
