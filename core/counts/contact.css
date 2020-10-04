@@ -1,0 +1,31 @@
+form[type=contact] {display: inline-block; padding: 1.5rem 0.75rem; padding-top: 0.375rem; width: 22.5rem; max-width: 100%;}
+form[type=contact] input[type=text], form[type=contact] input[type=number], form[type=contact] input[type=email], form[type=contact] label, form[type=contact] textarea
+{
+	display: block; width: 100%; padding-top: 0.375rem; padding-bottom: 0.375rem; text-align: left;
+}
+form[type=contact] input[type=text], form[type=contact] input[type=email] {border-bottom: solid 0.1rem #6FDEDE;}
+form[type=contact] label {margin-top: 1.5rem;}
+form[type=contact] label:first-child {margin-top: initial;}
+textarea {border-bottom: 0.1rem solid #6FDEDE; resize: none; overflow: hidden;}
+
+form[type=contact] [for=email], #email, [forid=email-h] {display: none;}
+
+input[type=reset], input[type=submit], input[type=button] {margin-top: 1.5rem;}
+form[type=contact] p {margin-top: 3rem;}
+
+table {padding: 3rem 0.75rem;}
+tr td {text-align: left; padding-top: 0.75rem; padding-bottom: 0.75rem;}
+tr td a {padding-bottom: 0.375rem; border-bottom: solid 0.1rem #6FDEDE;}
+tr td:first-of-type {text-align: right;}
+tr td:last-of-type {text-align: left; padding-left: 0.75rem;}
+tr td [mdl2], tr td [fa] {text-align: center; background-color: #6FDEDE; color: #101214; padding: 0.75rem; border-radius: 50%; top: -0.75rem; position: relative;}
+tr td [fa] {width: 3rem; height: 3rem;}
+
+[type=contact-actions] > a {display: inline-block; width: 12rem; height: 12rem; border-radius: 50%; border-left: dashed 0.2rem #101214; animation: a-rotate 2s linear infinite;}
+[type=contact-actions] > a:hover > div > div {background-color: #6FDEDE; color: #101214;}
+[type=contact-actions] > a > div {display: inline-block; width: 11rem; height: 11rem; margin: 0.5rem; border-radius: 50%; border-right: dashed 0.2rem #6FDEDE; animation: ad-rotate 1s linear infinite;}
+[type=contact-actions] > a > div > div {display: inline-block; width: 10rem; height: 10rem; margin: 0.5rem; padding: 1rem 0; animation: a-rotate 2s linear infinite; border-radius: 50%; border-top: solid 0.05rem #101214; border-bottom: solid 0.05rem #6FDEDE; transition: ease-in-out 0.5s; border: none;}
+[type=contact-actions] > a > div > div > span {display: inline-block; padding: 0.25rem 0;}
+[type=contact-actions] > a > div > div > span:first-child {font-size: 3rem;}
+@keyframes a-rotate {0% {transform: rotate(0deg); border-left-color: #101214;} 100% {transform: rotate(360deg); border-left-color: #6FDEDE;}}
+@keyframes ad-rotate {0% {transform: rotate(0deg); border-right-color: #6FDEDE;} 100% {transform: rotate(-360deg); border-right-color: #101214;}}

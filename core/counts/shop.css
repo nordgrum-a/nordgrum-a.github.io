@@ -1,0 +1,95 @@
+div[type=shop]
+{
+	display: none; background-color: rgba(111,222,222,0.75); z-index: 4; justify-content: center; align-items: center; overflow-y: auto;
+}
+form[type=shop]
+{
+	background-color: white; padding: 1.5rem 0.75rem; position: relative; overflow: hidden; border-radius: 0.125rem;
+	box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.125); height: 29rem;
+}
+form[type=shop] > a {position: absolute; top: 0.75rem; right: 0.75rem; z-index: 1;}
+
+[step] {position: absolute; top: 0; left: 400vw; transition: ease-in-out 0.375s;}
+[step]:first-of-type {position: relative; left: 0;}
+
+[step] > div {margin-top: 3rem; display: grid; grid-template-columns: auto auto; grid-gap: 1.5rem; text-align: left;}
+[step] > [btn] {margin-top: 3rem; margin-right: 1.5rem;}
+[step] > [btn]:last-child {margin-right: initial;}
+[step] > p {margin-top: 1.5rem;}
+[step] img {width: 20rem; margin-top: 3rem;}
+form[type=shop] input[type=submit], form[type=shop] input[type=button] {margin-top: 3rem;}
+
+form[type=shop] input[type=text], form[type=shop] input[type=email], form[type=shop] input[type=number], form[type=shop] label, #price, #total, [output] span
+{
+	display: block; width: 100%; padding-top: 0.375rem; padding-bottom: 0.375rem;
+}
+form[type=shop] input[type=text], form[type=shop] input[type=email], form[type=shop] input[type=number] {border-bottom: solid 0.1rem #6FDEDE;}
+#price, #total, [output] span {display: inline-block; width: auto; float: left;}
+[output] span {margin-right: 0.75rem;} #price {border-bottom: initial;}
+
+[type=plans] {margin-top: 8rem; padding: 1rem; grid-gap: 3rem 1rem;}
+[type=plans] ul {min-width: 14rem; border-radius: 0.125rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.125);}
+[type=plans] li {padding: 1rem; border-bottom: dotted 0.075rem rgba(0,0,0,0.75);}
+[type=plans] li:first-child {font-family: "Segoe UI Semi Bold"; text-transform: uppercase; border-bottom: initial; text-align: center; letter-spacing: 0.1rem;}
+[type=plans] li:last-child {text-align: center; border-bottom: initial;}
+
+table {margin-top: 4rem; border-collapse: collapse; width: 100%;}
+tr:nth-child(even) {background-color: #f8f8f8;}
+
+th {font-size: 1.125rem; letter-spacing: 0.125rem;}
+th, td {padding: 1rem 0.5rem; vertical-align: middle;}
+th [mdl2] {line-height: 1.5rem;}
+td [mdl2] {font-size: 1.25rem; margin-top: 0.125rem;}
+
+/*Themes*/
+[plans=yota] li:first-child {background-color: #00AEEF; color: white;}
+[plans=yota] li:last-child a {background-color: #00AEEF;}
+[plans=yota] tr:nth-child(even) {background-color: rgba(0,174,239,0.05);}
+[plans=yota] th {background-color: #00AEEF; color: white; border-right: 0.1rem solid white;}
+[plans=yota] td {border-right: 0.1rem solid #00AEEF;}
+
+[plans=rt] li:first-child {color: #FF4F12;}
+[plans=rt] li:last-child a {background-color: #7700FF;}
+[plans=rt] tr:nth-child(even) {background-color: rgba(109,0,255,0.05);}
+[plans=rt] th {color: #FF4F12; border-right: 0.1rem solid #7700FF;}
+[plans=rt] td {border-right: 0.1rem solid #7700FF;}
+
+[plans=tele2] li:first-child {background-color: #141414; color: white;}
+[plans=tele2] li:last-child a {background-color: #141414;}
+[plans=tele2] tr:nth-child(even) {background-color: rgba(20,20,20,0.05);}
+[plans=tele2] th {background-color: #141414; color: white; border-right: 0.1rem solid white;}
+[plans=tele2] td {border-right: 0.1rem solid #141414;}
+
+[plans=mts] li:first-child {background-color: #E30611; color: white;}
+[plans=mts] li:last-child a {background-color: #E30611;}
+[plans=mts] tr:nth-child(even) {background-color: rgba(226,7,17,0.05);}
+[plans=mts] th {background-color: #E30611; color: white; border-right: 0.1rem solid white;}
+[plans=mts] td {border-right: 0.1rem solid #E30611;}
+
+[plans=megafon] li:first-child {background-color: #2CB56D; color: white;}
+[plans=megafon] li:last-child a {background-color: #2CB56D;}
+[plans=megafon] tr:nth-child(even) {background-color: rgba(44,181,109,0.05);}
+[plans=megafon] th {background-color: #2CB56D; color: white; border-right: 0.1rem solid white;}
+[plans=megafon] td {border-right: 0.1rem solid #2CB56D;}
+
+[plans=beeline] li:first-child {background-color: #FFC000; color: #2C2C2C;}
+[plans=beeline] li:last-child a {background-color: #2C2C2C; color: #FFC000;}
+[plans=beeline] tr:nth-child(even) {background-color: rgba(44,44,44,0.05);}
+[plans=beeline] th {background-color: #2C2C2C; color: #FFC000; border-right: 0.1rem solid #FFC000;}
+[plans=beeline] td {border-right: 0.1rem solid #2C2C2C;}
+
+th:last-child, td:last-child {border-right: initial;}
+
+[type=section][plans=yota] {background-color: #00AEEF;}
+[type=section][plans=yota] * {color: white;}
+
+@media only screen and (max-width: 32rem)/*512*/
+{
+	div[type=shop] {align-items: initial;}
+	form[type=shop] {width: 100%; height: 42rem;}
+	[step] > div {grid-template-columns: auto;}
+	th {font-size: 1rem; letter-spacing: 0.05rem;}
+	th [mdl2] {font-size: 1.125rem; line-height: 1.5rem;}
+	td {font-size: 0.875rem; letter-spacing: initial;}
+	td [mdl2] {font-size: 1.125rem; line-height: 1.25rem;}
+}

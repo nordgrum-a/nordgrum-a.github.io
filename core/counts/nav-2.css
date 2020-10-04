@@ -1,0 +1,56 @@
+nav {font-size: 0;}
+
+nav.static {margin-left: 5.5rem; margin-top: 1.25rem; display: inline-block; float: left; white-space: nowrap;}
+nav.static a {display: inline-block; margin-left: 0.75rem; margin-right: 0.75rem; border-bottom: 0.0875rem solid rgba(255,255,255,0.9); border-top: 0.0875rem solid rgba(255,255,255,0.9); padding-top: 0.325rem; padding-bottom: 0.375rem; letter-spacing: 0.075rem; transition: ease-in-out 0.375s; text-transform: uppercase; font-size: 0.75rem; border-radius: 0.25rem;}
+nav.static a {padding-left: 0.25rem; border: solid 0.1rem rgba(111,222,222,0); border-radius: 0.25rem; animation: 2s fieldset linear infinite;}
+nav.static a:hover {letter-spacing: 0.3rem; border-bottom: solid 0.0875rem rgba(111,222,222,0.9); border-top: solid 0.0875rem rgba(111,222,222,0.9);}
+
+div.social {display: inline-block; float: right; margin-right: 1.125rem;} div.social > a {padding: 1.5rem 0.75rem;}
+
+nav.desktop {display: inline-block; width: 4.125rem; height: 100%; position: fixed; top: 0; left: 0; z-index: 3; text-align: left; background-image: url('../../media/png/noise-ep.png'); background-attachment: fixed; animation: noise 0.1s infinite;}
+nav.desktop > a, .dropdown > span, nav.desktop > div:last-child a {display: inline-block; transition: ease-in-out 0.375s;}
+nav.desktop a:hover, .dropdown > span:hover, nav.desktop > div:last-child a:last-child:hover {background-color: rgba(111,222,222,0.25);}
+
+nav.desktop > a.mdl2, .dropdown > a.mdl2, .dropdown > span.mdl2, .dropdown.actions > div > a, nav.desktop > div:last-child a {padding: 1.375rem; letter-spacing: initial;}
+nav.desktop > a.mdl2, .dropdown > span, nav.desktop > div:last-child a {color: rgba(255,255,255,0.9);}
+nav.desktop > div:last-child a:last-child {background-color: rgba(255,255,255,0.25);}
+nav.desktop > .dropdown:first-child > span {background-color: rgba(255,255,255,0.125);}
+nav.desktop > .dropdown:first-child > span:hover {background-color: rgba(255,255,255,0.25);}
+nav.desktop > div:last-child {position: absolute; bottom: 0;}
+
+.dropdown {display: inline-block; position: relative;}
+.dropdown:hover > div {display: inline-block; background-color: rgba(56,167,167,0.75);}
+.dropdown > div {display: none; position: absolute; left: 4.125rem; text-align: left;}
+.dropdown.actions > div {top: initial; bottom: 0;}
+
+.dropdown > div > a, .dropdown > div > span {display: inline-block; width: 100%; white-space: nowrap; color: rgba(255,255,255,0.9); padding: 1.53rem;}
+.dropdown > div > span {text-transform: uppercase; letter-spacing: 0.125rem; background-color: rgba(111,222,222,0.5); color: rgba(255,255,255,0.9);}
+.dropdown > span > .mdl2 {font-size: 1.125rem; height: 1rem; margin-top: 0.25rem;}
+.dropdown > span:hover > .mdl2 {transform: rotateY(180deg);}
+.dropdown > span > .mdl2 {padding: initial;}
+.dropdown > span > span {transition: ease-in-out 0.375s;}
+
+nav.mob > a {color: rgba(255,255,255,0.9); float: left; padding: 1.175rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.375rem;}
+nav.mob > a:hover {color: rgba(111,222,222,0.9); letter-spacing: 0.5rem;}
+nav.mob > span {font-family: monospace; background-color: rgba(111,222,222,0.375); color: rgba(255,255,255,0.9); float: right; font-size: 0.75rem; line-height: 0.575rem; display: inline-block; width: 3.5rem; height: 3.5rem; padding: 0.85rem 0.95rem 1.15rem 1.05rem; transition: ease-in 0.125s; letter-spacing: 0.15rem;}
+nav.mob > span:hover {background-color: rgba(111,222,222,0.5);}
+
+nav.mob {display: none; width: 100%; height: 3.5rem; position: sticky; top: 0; left: 0; z-index: 3; box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.125); transition: ease-in-out 0.375s; background-image: url('../../media/png/noise.png'); background-color: rgba(0,0,0,0.75); animation: noise 0.1s infinite;}
+
+nav.mob > div {position: fixed; width: 100%; top: 0; right: -125%; height: 100%; overflow-x: hidden; overflow-y: auto; background-image: url('../../media/png/noise.png'); background-color: rgba(0,0,0,0.9); animation: noise 0.1s infinite; transition: ease-in 0.375s;}
+nav.mob > div > .mdl2 {z-index: 1; position: absolute; top: 1rem; right: 1rem;}
+nav.mob > div > span:nth-child(2), nav.mob > div > span:nth-of-type(3) {display: block; padding: 1rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.4375rem;}
+nav.mob > div > span:nth-of-type(3) {display: inline-block; width: calc(100% - 1rem); padding-top: 2rem; margin-top: 2rem; border-top: 0.1rem solid rgba(255,255,255,0.25);}
+
+nav.mob > div a, nav.mob > div span {color: rgba(255,255,255,0.9);} nav.mob > div a:hover {color: rgba(255,255,255,0.9);}
+nav.mob > div > div {display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 0.5rem; padding: 0.5rem;}
+nav.mob > div > div > a {width: 100%; background-image: url('../../media/png/noise-ep.png'); background-attachment: fixed; animation: noise 0.1s infinite; padding: 0.75rem; transition: ease-in-out 0.25s; border-radius: 0.125rem;}
+nav.mob > div > div > a:hover {background-color: rgba(111,222,222,0.25);}
+nav.mob > div > div > a > .mdl2 {display: block; font-size: 1.75rem; margin-bottom: 0.75rem;}
+nav.mob > div > div > a img {display: block; width: 1.75rem; max-width: initial; margin: 0 auto 0.75rem auto;}
+
+@media only screen and (max-width: 32rem)/*512*/
+{
+	nav.desktop {display: none;} nav.mob {display: inline-block;} nav.static {display: none;}
+	div.social {display: block; float: none; text-align: center; margin-top: 1rem; margin-right: initial;}
+}

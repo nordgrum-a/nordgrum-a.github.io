@@ -1,0 +1,13 @@
+aside {display: grid; grid-template-columns: auto auto; width: calc(100% - 5.125rem); float: right; margin-top: 4rem;}
+aside > div > div {display: inline-block; width: 20rem; padding: 1rem; padding-top: 0.5rem; margin: 4rem 1rem; background-image: url('../../media/png/noise-ep.png'); animation: noise 0.1s infinite; border-radius: 0.125rem;}
+
+aside .hd {display: none; margin: initial;}
+
+aside .newsletters form {font-size: 0;}
+aside .newsletters label {display: block; text-align: left; padding: 0 1rem;}
+#newsletters {display: inline-block; width: 12rem; padding-top: 0.45rem; padding-bottom: 0.45rem; margin-top: 1.5rem; border-bottom: 0.1rem solid #6FDEDE;}
+aside .newsletters input[type=submit], aside.newsletters input[type=button] {margin-top: 1.5rem; min-width: initial !important;}
+
+aside .share a {margin-top: 1.5rem;}
+@media only screen and (max-width: 45rem)/*720*/{aside {grid-template-columns: auto;} aside .hd {display: block;}}
+@media only screen and (max-width: 32rem)/*512*/{aside {width: initial; float: initial;}}

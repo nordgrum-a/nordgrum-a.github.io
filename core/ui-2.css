@@ -1,0 +1,254 @@
+@import url("counts/nav-2.css"); @import url("counts/aside-2.css"); @import url("counts/footer-2.css"); @import url("counts/class.css");
+
+/*Icon*/
+@font-face {font-family: "Segoe MDL2 Assets"; src: url("../lib/font/Segoe MDL2 Assets.woff2");}
+@font-face {font-family: "Font Awesome"; src: url("../lib/font/Font Awesome.woff2");}
+
+/*Font*/
+@font-face {font-family: "EP Bold"; src: url("../lib/font/EP Bold.woff2");}
+@font-face {font-family: "EP"; src: url("../lib/font/EP.woff2");}
+
+/*Root*/
+html {text-align: center; scroll-behavior: smooth;} body {overflow-x: hidden;}
+* {box-sizing: border-box; vertical-align: top; background-color: initial; border: initial; margin: initial; outline: initial; cursor: none !important; color: rgba(255,255,255,0.9);}
+:hover, :focus, :after, :before {outline: initial;}
+
+/*Tag*/
+section, article {margin-top: 3rem;}
+
+header, section, article, footer {display: inline-block; width: calc(100% - 4.125rem); float: right; z-index: 1;}
+footer {width: calc(100% - 5.125rem);}
+
+h1 {font-size: 1rem; letter-spacing: 0.1rem;}
+h2 {font-size: 0.875rem; letter-spacing: 0.0875rem;}
+h3 {font-size: 0.75rem; letter-spacing: 0.075rem;}
+h1, h2, h3, strong {font-family: "EP Bold"; font-weight: normal;}
+
+a, p, q, li, span, address, input, output, textarea, label, th, td {font-family: "EP"; font-size: 0.75rem; letter-spacing: 0.075rem;}
+
+p {line-height: 1.5rem;}
+p a {padding-bottom: 0.25rem; color: rgba(255,255,255,0.75); border-bottom: solid 0.1rem rgba(255,255,255,0.75); border-top: solid 0.1rem rgba(255,255,255,0.75); border-radius: 0.25rem;} p a:hover {color: rgba(111,222,222,0.9); border-color: transparent;}
+p .btn {border: initial;}
+
+a {text-decoration: none;} a:hover {color: rgba(111,222,222,0.9);}
+a.link {color: black; border-bottom: initial; pointer-events: none;} a.link:hover {color: black;}
+
+input[type=reset], input[type=submit], input[type=button] {cursor: pointer;}
+
+th {font-weight: normal;}
+
+address {font-style: normal;} p address {display: inline;}
+q {font-style: italic;}
+mark {background: linear-gradient(transparent 60%,rgba(111,222,222,0.25) 40%);}
+ul {list-style-type: none; padding-left: 0rem; text-align: left;}
+
+iframe {width: 0; height: 0; display: none; visibility: hidden;}
+
+body > video {position: fixed; object-fit: cover; min-width: 100%; min-height: 100%; height: 125%; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: -1;}
+/*
+object-fit: cover; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%,-50%);
+*/
+
+img {opacity: 0.9;}
+audio {display: none;}
+
+ol a {color: rgba(0,0,0,0.75); border-bottom: 0.075rem dotted rgba(0,0,0,0.75);}
+ol a:hover {color: black; border-bottom-color: black;}
+
+fieldset
+{
+	display: inline-block; width: auto; max-width: 100%; padding: 1rem; margin-top: 0.25rem;
+	border: solid 0.1rem rgba(111,222,222,0); border-radius: 0.25rem; animation: 2s fieldset ease-in-out infinite;
+}
+@keyframes fieldset {
+	0% {border-color: rgba(111,222,222,0);}
+	25% {border-top-color: rgba(111,222,222,0.75); border-left-color: rgba(111,222,222,0); border-right-color: rgba(111,222,222,0); border-bottom-color: rgba(111,222,222,0);}
+	50% {border-top-color: rgba(111,222,222,0); border-left-color: rgba(111,222,222,0.75); border-right-color: rgba(111,222,222,0.75); border-bottom-color: rgba(111,222,222,0);}
+	75% {border-left-color: rgba(111,222,222,0); border-right-color: rgba(111,222,222,0); border-bottom-color: rgba(111,222,222,0.75);}
+	100% {border-color: rgba(111,222,222,0);}
+}
+
+legend {font-family: "EP"; font-size: 0.875rem; letter-spacing: 0.4375rem; padding: 0 0.75rem; padding-bottom: 0.25rem; margin: auto; text-transform: uppercase;}
+
+fieldset ol {text-align: left; margin: 0.75rem; margin-left: initial;}
+fieldset li:first-child {padding-top: initial;}
+fieldset li {padding: 0.75rem;}
+
+/*Global*/
+
+
+[ta_lr] *:first-child {text-align: left;} [ta_lr] * {text-align: right;}
+[bt] {border-top: 0.0625rem solid rgba(0,0,0,0.25); padding-top: 1rem;}
+[db] {display: block !important;} [dib] {display: inline-block;} [dn] {display: none;}
+[fs0] {font-size: 0rem;} [ls=ngt] {letter-spacing: -0.0625rem; white-space: nowrap;}
+[f=l] {float: left;} [f=r] {float: right;}
+[mw=r16] {min-width: 19rem; max-width: 100%;}
+
+.btn, input[type=reset], input[type=submit], input[type=button]
+{
+	display: inline-block; text-align: center !important;
+	border-radius: 0.125rem; padding: 0.6rem 0.75rem; padding-right: 0.375rem;
+	background-image: url('../media/png/noise-ep.png'); background-attachment: fixed; background-color: rgba(111,222,222,0.75); color: rgba(0,0,0,0.9); animation: noise 0.1s infinite;
+	font-size: 0.75rem; letter-spacing: 0.375rem; text-transform: uppercase;
+}
+.btn:hover, [btn=share]:hover, input[type=reset]:hover, input[type=submit]:hover, input[type=button]:hover
+{transform: scale(0.85); color: rgba(0,0,0,0.9);}
+.btn .mdl2 {line-height: 1.375rem; letter-spacing: initial;}
+
+.mdl2, div.mdl2 > * {font-family: "Segoe MDL2 Assets"; font-size: 1.375rem; letter-spacing: initial;}
+.fa, div.fa > * {font-family: "Font Awesome"; font-size: 1.375rem; letter-spacing: initial;}
+a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
+
+[mdl2=img] {background-color: rgba(0,0,0,0.0625); border-radius: 50%; font-size: 6rem; padding: 2rem;}
+[mdl2=icon] {font-size: 8rem;}
+
+[icon-font] {border-radius: 50%; border: solid 0.0875rem black; padding: 0.6625rem;}
+[icon-img] {border-radius: 50%; width: 3.25rem;}
+
+[type=center], [type=center-c] {position: absolute; width: 100%;}
+[type=center] {height: 100%; z-index: 1; top: 0; left: 0;}
+[type=center-c] {top: 50%; left: 50%; transform: translate(-50%,-50%); padding: 1rem;}
+[type=center-c] span {font-size: 7.5vh; color: white; text-shadow: 0 0 0.25rem rgba(0,0,0,0.75);}
+
+[vh] img {position: absolute; object-fit: cover; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+[type=slide-1] {background: transparent url('../media/jpg/home/slide-1.jpg') no-repeat fixed center/cover;}
+[type=slide-2] {background: transparent url('../media/jpg/home/slide-2.jpg') no-repeat fixed center/cover;}
+[type=slide-1], [type=slide-2] {filter: contrast(110%) brightness(110%) sepia(30%) grayscale(100%);}
+
+/*Design*/
+
+
+[type=section] {margin: 1rem; padding: 1rem; border-radius: 0.125rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.125);}
+[type=section] p {margin-top: 1.5rem;}
+
+/*Grid*/
+[grid] {display: grid; grid-gap: 1rem; padding: 1rem;}
+[grid=col-2] {grid-template-columns: auto auto;}
+[grid=col-3] {grid-template-columns: auto auto auto;}
+[grid=col-4] {grid-template-columns: auto auto auto auto;}
+[grid=col-6] {grid-template-columns: auto auto auto auto auto auto;}
+
+[grid] > * {margin: auto;} [grid] > div > * {margin: initial;} [grid] img {max-width: 100%;}
+[grid-g4] {grid-gap: 4rem 2rem;} [grid-g6] {grid-gap: 6rem 1.5rem;} [grid-g8] {grid-gap: 8rem 2rem;} [grid][ait] > * {margin: initial;}
+
+section > h1, section > h2, section > h3, section > p, .vw > h1, .vw > h2, .vw > h3, .vw > p {padding-left: 1rem; padding-right: 1rem;}
+[p=i] {padding: initial;}
+
+/*Demo*/
+
+
+/*article*/
+[article] {text-align: left;} [article] h2 {margin-top: 3rem;} [article] h3 {margin-top: 1.5rem;} [article] p {margin-top: 0.75rem;}
+[pbl] {border-left: solid 0.25rem #6FDEDE; margin-left: 1rem; margin-top: 1.5rem; margin-right: 1rem; background-color: rgba(111,222,222,0.05);} [pbl] > p {text-align: left; padding: 0.5rem 1rem; margin-top: initial;}
+
+[type=providers] a {overflow: hidden; border-radius: 0.25rem; box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.25);}
+[type=providers] a img {transition: ease-in-out 0.375s;}
+[type=providers] a:hover img {transform: scale(1.25);}
+
+article > .vw {text-align: left;}
+article h2 {margin-top: 8rem;}
+article h2:first-child {margin-top: initial;}
+article h3 {margin-top: 2rem;}
+article p {margin-top: 1rem;}
+article ol {margin-top: 1rem;}
+article ul {margin: 1rem;}
+article ol li, article ul li {padding-top: 0.25rem; padding-bottom: 0.25rem;}
+
+[type=date] {padding-left: 1rem; padding-right: 1rem;}
+[type=date] span {font-size: 0.875rem; color: rgba(0,0,0,0.75); white-space: nowrap;}
+
+[type=read-more] {margin-top: 8rem;}
+
+[type=chat] {display: inline-block; position: fixed; right: -4rem; bottom: 1rem; animation: chat 0.75s linear forwards; z-index: 2;}
+@keyframes chat {100% {right: 1rem;}}
+[type=chat] > span {display: inline-block; font-family: "Segoe MDL2 Assets"; font-size: 2rem; padding: 1rem; color: #6FDEDE; border-radius: 50%; background-color: rgba(16,18,20,0.75);}
+[type=chat] > ul {display: none; background-color: rgba(16,18,20,0.75); padding: 1rem; border-radius: 0.125rem; box-shadow: 0 0 1rem 0 rgba(0,0,0,0.125);}
+[type=chat] li {padding-top: 1rem; text-align: center; color: white;}
+[type=chat] li:first-child {padding-top: initial; font-family: "EP Bold"; color: white; font-size: 1.375rem; letter-spacing: 0.375rem; font-variant: small-caps; padding-bottom: 1rem; border-bottom: 0.05rem dotted rgba(255,255,255,0.75);}
+[type=chat] li a {color: #6FDEDE; font-size: 1.125rem; transition: ease-out 0.5s;}
+[type=chat] li a:hover {text-decoration: line-through; letter-spacing: 0.5rem;}
+[type=chat] li:last-child {border-top: 0.05rem dotted rgba(255,255,255,0.75); margin-top: 1rem;}
+[type=chat] li:last-child .mdl2 {color: #6FDEDE; font-size: 2rem; float: right;}
+@media only screen and (max-height: 32rem)/*512*/
+/*background-color: rgba(16,18,20,0.75);*/
+{
+	[type=chat] {display: none;}
+}
+
+/*Transition*/
+a, input, output {transition: ease-in-out 0.25s;}
+
+/*AOS*/
+.aos {animation-duration: 0.75s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;}
+
+[data-aos=zoom-in].aos {transform: scale(0); opacity: 0; animation-name: zoom-in;}
+@keyframes zoom-in {87.5% {transform: scale(1.125); opacity: 1;} 100% {transform: scale(1); opacity: 1;}}
+
+[data-aos=flip-360].aos {animation-name: flip-360; transform: perspective(37.5rem) rotateY(0deg);}
+@keyframes flip-360 {100% {transform: perspective(37.5rem) rotateY(360deg);}}
+
+[data-aos=scalex].aos {animation-name: scalex; transform: scaleX(0);}
+@keyframes scalex {100% {transform: scaleX(1);}}
+[data-aos=scaley].aos {animation-name: scaley; transform: scaleY(0);}
+@keyframes scaley {100% {transform: scaleY(1);}}
+
+[data-aos=move-up].aos {transform: translateY(8rem); opacity: 0.25; animation-name: move-up;}
+@keyframes move-up {100% {transform: translateY(0); opacity: 1;}}
+[data-aos=move-down].aos {transform: translateY(-8rem); opacity: 0.25; animation-name: move-down;}
+@keyframes move-down {100% {transform: translateY(0); opacity: 1;}}
+[data-aos=move-right].aos {transform: translateX(-8rem); opacity: 0.25; animation-name: move-right;}
+@keyframes move-right {100% {transform: translateX(0); opacity: 1;}}
+[data-aos=move-left].aos {transform: translateX(8rem); opacity: 0.25; animation-name: move-left;}
+@keyframes move-left {100% {transform: translateX(0); opacity: 1;}}
+
+[data-aos=slide-home].aos {animation-name: slide-home;}
+@keyframes slide-home {100% {filter: none;}}
+
+/*Animations*/
+@keyframes share {50% {transform: scale(1.125);}}
+@keyframes stop {0% {} 50% {filter: invert(100%);} 100% {}}
+@keyframes noise {0% {background-position: 50%,50%} 50% {background-position: 45%,55%} 100% {background-position: 50%,50%}}
+
+/*Breakpoints*/
+@media only screen and (max-width: 67.5rem)/*1080*/
+{
+	.vw {width: 70%;} [grid=col-6] {grid-template-columns: auto auto auto auto;}
+	body > video {height: 100%;}
+}
+@media only screen and (max-width: 60rem)/*960*/
+{
+	.vw {width: 75%;}
+}
+@media only screen and (max-width: 52.5rem)/*840*/
+{
+	.vw {width: 80%;} [grid=col-3], [grid=col-4] {grid-template-columns: auto auto;}
+}
+@media only screen and (max-width: 45rem)/*720*/
+{
+	.vw {width: 85%;} [grid=col-6] {grid-template-columns: auto auto auto;}
+}
+@media only screen and (max-width: 37.5rem)/*600*/
+{
+	.vw {width: 90%;}
+	[grid=col-2] {grid-template-columns: auto;} [grid=col-4], [grid=col-6] {grid-template-columns: auto auto;}
+	[ta_lr] *:first-child, [ta_lr] * {text-align: center;}
+}
+@media only screen and (max-width: 32rem)/*512*/
+{
+	.vw {width: 95%;}
+	header, section, article, footer {display: block; width: initial; float: initial;}
+	header {display: none;}
+	* {cursor: initial !important;}
+	nav[mob] > [nav=mob-open], [nav=mob-close], [type=chat] > span, [type=chat] li:last-child .mdl2 {cursor: pointer !important;}
+	section, article {margin-top: initial;}
+}
+@media only screen and (max-width: 30rem)/*480*/
+{
+	.vw {display: block; width: initial;}
+	main > [grid=col-4] {grid-template-columns: auto; grid-gap: 4rem 1rem;}
+}
+@media only screen and (max-width: 26.25rem)/*420*/
+{
+	[grid=col-4], [grid=col-6] {grid-template-columns: auto;}
+}

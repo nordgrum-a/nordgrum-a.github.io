@@ -1,0 +1,43 @@
+[type=mts-discount-w] {background-color: #E30611; padding: 3rem 1rem;}
+[type=mts-discount-w] h2 {color: white; margin-top: 3rem;}
+[type=mts-discount-w] p {color: white; margin-top: 3rem; text-align: left; line-height: 1.75rem;}
+[type=mts-discount-w] img {width: 16rem;}
+
+[type=mts-discount-w] a {background-color: white; color: #E30611; margin-top: 1.5rem;} [type=mts-discount-w] a:hover {color: #E30611;}
+/*@supports not (background-image: url('../../media/webp/home/mts.webp')) {[type=slide-1] {background-image: url('../../media/png/home/mts.png');}}*/
+
+[type=mts-discount] {display: none; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(111,222,222,0.75); z-index: 10; overflow: hidden;}
+[type=mts-discount] > div {display: inline-block; position: relative; max-height: calc(100% - 2rem); background-color: white; padding: 1rem; border-radius: 0.125rem; margin-left: 1rem; margin-right: 1rem; overflow-y: auto; margin: auto 1rem;}
+
+[type=mts-discount] > div > span {display: inline-block; font-family: "Segoe UI Semi Bold"; margin-top: 3rem; text-transform: uppercase; width: 100%;}
+[type=mts-discount] > div > [mdl2] {position: absolute; top: 1rem; right: 1rem;}
+
+[type=mts-discount-1] {margin-top: 1rem;}
+[type=mts-discount] label {display: block;}
+[type=mts-discount] form div {display: inline-block; margin-top: 2rem; border: 0.05rem solid #6FDEDE; border-radius: 2rem; overflow: hidden;}
+[type=mts-discount] form div:last-child {background-color: #6FDEDE; padding: 0.25rem 0;}
+[type=mts-discount] input, [type=mts-discount] output {display: inline-block; font-size: 1.25rem; width: 5.5rem; text-align: left;}
+[type=mts-discount] form div span {display: inline-block; background-color: #6FDEDE; font-size: 1.25rem; padding: 0.5rem 0.5rem 0.5rem 1rem;}
+[type=mts-discount] form > span {display: block; margin-top: 2rem;}
+[type=mts-discount] input {padding: 0.5rem 1rem 0.5rem 0.5rem;}
+[type=mts-discount] form div:last-child span {border-right: 0.05rem solid #101214; padding: 0.25rem 0.5rem 0.25rem 1rem;}
+[type=mts-discount] output {background-color: #6FDEDE; padding: 0.25rem 1rem 0.25rem 0.5rem;}
+
+[type=mts-discount-2] {display: none; margin-top: 3rem;}
+[type=mts-discount-2] a {margin-top: 1rem; margin-bottom: 1rem;}
+
+[type=mts-discount-3] {display: none; margin-top: 1rem;}
+[type=mts-discount-3] [pbl] {margin: initial; margin-top: 3rem; margin-bottom: 1rem;}
+[type=mts-discount-3] [pbl] span {display: block; text-align: left; font-family: "Segoe UI Semi Bold"; font-size: 0.875rem; text-transform: uppercase; padding-top: 0.5rem; padding-left: 1rem;}
+[type=mts-discount-3] [pbl] p {font-size: 0.875rem;}
+[type=mts-discount-3] div:first-child {margin-bottom: 3rem;}
+[type=mts-discount-3] div:first-child p {min-width: 100%; width: 0; text-align: left;}
+[type=mts-discount-3] > span {display: inline-block; font-family: "Segoe UI Semi Bold"; background-color: rgba(111,222,222,0.25); color: #101214; padding: 0.5rem 0.25rem; border-radius: 0.125rem; margin-right: 0.5rem; width: 2rem; animation-fill-mode: forwards; animation-timing-function: ease-in-out; transform: scale(0);}
+[type=mts-discount-3] > span:first-child {animation-duration: 0.5s;}
+[type=mts-discount-3] > span:nth-child(2) {animation-duration: 0.75s;}
+[type=mts-discount-3] > span:nth-child(3) {animation-duration: 1s;}
+[type=mts-discount-3] > span:nth-child(4) {animation-duration: 1.25s;}
+[type=mts-discount-3] > span:nth-child(5) {animation-duration: 1.5s;}
+[type=mts-discount-3] > span:nth-child(6) {animation-duration: 1.75s;}
+[type=mts-discount-3] > span:nth-child(7) {animation-duration: 1.75s;}
+[type=mts-discount-3] > span:last-child {animation-duration: 1.75s; margin-right: initial;}
