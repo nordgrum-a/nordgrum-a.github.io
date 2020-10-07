@@ -10,7 +10,7 @@
 @font-face {font-family: 'Exo 2'; src: url('../libs/fonts/Exo 2 Bold.woff2'); font-weight: bold;}
 
 /*Root*/
-html {font-family: 'Exo 2', sans-serif; scroll-behavior: smooth; text-align: center;}
+html {font-family: 'Exo 2', sans-serif; scroll-behavior: smooth; text-align: center; overflow-x: hidden;}
 body {overflow-x: hidden; overflow-y: hidden; background-color: white;}
 * {box-sizing: border-box; vertical-align: top; background-color: initial; border: initial; margin: initial; outline: initial; cursor: none !important;}
 :hover, :focus, :after, :before {outline: initial;}
