@@ -1,0 +1,21 @@
+.aos {animation-duration: 0.75s; animation-fill-mode: forwards; animation-timing-function: ease-in-out;}
+
+[data-aos=zoom-in].aos {transform: scale(0); opacity: 0; animation-name: zoom-in;}
+@keyframes zoom-in {87.5% {transform: scale(1.125); opacity: 1;} 100% {transform: scale(1); opacity: 1;}}
+
+[data-aos=flip-360].aos {animation-name: flip-360; transform: perspective(37.5rem) rotateY(0deg);}
+@keyframes flip-360 {100% {transform: perspective(37.5rem) rotateY(360deg);}}
+
+[data-aos=scalex].aos {animation-name: scalex; transform: scaleX(0);}
+@keyframes scalex {100% {transform: scaleX(1);}}
+[data-aos=scaley].aos {animation-name: scaley; transform: scaleY(0);}
+@keyframes scaley {100% {transform: scaleY(1);}}
+
+[data-aos=move-up].aos {transform: translateY(16rem); animation-name: move-up;}
+@keyframes move-up {100% {transform: translateY(0);}}
+[data-aos=move-down].aos {transform: translateY(-16rem); animation-name: move-down;}
+@keyframes move-down {100% {transform: translateY(0);}}
+[data-aos=move-right].aos {transform: translateX(-16rem); animation-name: move-right;}
+@keyframes move-right {100% {transform: translateX(0);}}
+[data-aos=move-left].aos {transform: translateX(16rem); animation-name: move-left;}
+@keyframes move-left {100% {transform: translateX(0);}}

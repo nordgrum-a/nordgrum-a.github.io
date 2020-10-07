@@ -1,0 +1,21 @@
+/*Nav*/
+footer {
+	display: grid; grid-template-areas: 'footer-img footer-p footer-div'; grid-gap: 1rem;
+	background-color: #162020; color: white; margin-top: 4rem; padding: 2rem 1rem;}
+
+footer > img {float: left; height: 2rem; grid-area: footer-img;}
+footer > p {grid-area: footer-p; font-size: 1rem; height: 2rem;}
+footer > p > q {font-size: 0.75rem;}
+footer > div {float: right; height: 2rem; grid-area: footer-div; text-align: right; padding-top: 0.25rem;}
+footer > div > a {display: inline-block; color: white; font-family: "Font Awesome"; font-size: 1.25rem; margin-left: 1rem;}
+footer > div > a:first-child {margin-left: initial;}
+footer > div > a:hover {color: rgba(255,255,255,0.75);}
+
+/*1080*/
+@media only screen and (max-width: 67.5rem) {footer {padding-bottom: 5rem;}}
+/*600*/
+@media only screen and (max-width: 37.5rem) {
+	footer {grid-template-areas:
+		'footer-img footer-div'
+		'footer-p footer-p';}
+}
