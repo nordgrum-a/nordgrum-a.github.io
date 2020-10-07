@@ -1,5 +1,13 @@
 //GTM
 
+//Cart
+//$('body').append('<link rel="preconnect" href="https://app.snipcart.com"><link rel="preconnect" href="https://cdn.snipcart.com">');
+//$('body').append('<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">');
+//$('body').append('<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script>');
+//$('body').append('<div hidden id="snipcart" data-api-key="<API_KEY>" data-config-add-product-behavior="none"></div>');
+document.addEventListener('snipcart.ready', () => {
+	Snipcart.api.session.setCurrency('rub');
+});
 
 //Initialization
 $('.hr').addClass('vw');
@@ -15,23 +23,6 @@ function ciiv(){var wh = $(window).height(); var wtp = $(window).scrollTop(); va
 $(window).on('scroll resize', ciiv); $(window).trigger('scroll');
 
 $('[data-aos-dur]').each(function(){var aos_dur = $(this).attr('data-aos-dur'); $(this).css('animation-duration', aos_dur + 's');});
-
-//Cursor
-if ($(window).width() > 720) {$('body').append('<span class="cursor"></span><div class="circle"></div>');}
-function moveCursor(e) {TweenLite.to($('.cursor'), 0.125, {css: {left: e.pageX, top: e.pageY}});} $(window).on('mousemove', moveCursor);
-function moveCircle(e) {TweenLite.to($('.circle'), 0.675, {css: {left: e.pageX, top: e.pageY}});} $(window).on('mousemove', moveCircle);
-
-$('a, button').hover(function(){$('.cursor').css('color', 'white'); $('.circle').css({'background-color': 'rgba(72,205,196,0.5)', 'border': 'none'});}, function(){$('.cursor').css('color', '#48CDC4'); $('.circle').css({'background-color': 'transparent', 'border': 'solid 0.05rem white'});});
-
-//Parallax
-$(document).mousemove(function(e){
-	parallaxIt(e, '[data-parallax=follow]', 50);
-	parallaxIt(e, '[data-parallax=unfollow]', -50);
-	parallaxIt(e, '[data-parallax=follow-x2]', 100);
-	parallaxIt(e, '[data-parallax=unfollow-x2]', -100);
-});
-function parallaxIt(e, target, movement){var $this = $('body'); var relX = e.pageX - $this.offset().left; var relY = e.pageY - $this.offset().top; TweenMax.to(target, 1, {x: (relX - $this.width() / 2) / $this.width() * movement, y: (relY - $this.height() / 2) / $this.height() * movement});}
-$(document).mousemove(function(event){$('[data-parallax=angle]').each(function(index, element){var xPos = (event.clientX/$(window).width())-0.5, yPos = (event.clientY/$(window).height())-0.5, box = element; TweenLite.to(box, 1, {rotationY: xPos * -50, rotationX: yPos * 50, ease: Power1.easeOut,});})});
 
 //Form
 var submitted=false;

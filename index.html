@@ -7,6 +7,9 @@
 		<meta name="theme-color" content="#162020">
 		<!-- Include -->
 		<link rel="stylesheet" href="core/ui.css">
+		<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">
+		<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script>
+		<div id="snipcart" data-config-add-product-behavior="none" data-api-key="YmEyNzMwMDQtYzViZS00M2Y3LWJhNmQtOTMyNmFmNzU3ODc2NjM3Mzc2ODUwODYzMzc2MzA2" hidden></div>
 		<!-- Icon -->
 		<link rel="shortcut icon" href="https://mordwerg.com/media/ico/icon.ico">
 		<link rel="apple-touch-icon" href="https://mordwerg.com/media/png/logo.png">
@@ -67,6 +70,8 @@
 			</div>
 			<a href="https://mirkrovli18.ru/about">О Нас</a>
 			<a href="https://mirkrovli18.ru/contact">Контакты</a>
+			<span class="mdl2 snipcart-customer-signin"></span>
+			<span class="mdl2 snipcart-checkout"></span>
 		</nav>
 		<nav class="nav-mob">
 			<div>
@@ -91,7 +96,7 @@
 				<span title="Действия"><br><br></span>
 			</div>
 		</nav>
-		<header data-parallax="angle">
+		<header>
 			<picture>
 				<source type="image/webp" srcset="media/webp/header.webp">
 				<source type="image/png" srcset="media/png/header.png">
@@ -107,7 +112,13 @@
 		<section>
 			<div class="vw">
 				<h1 data-top="4">Профессиональная Кровельная Компания</h1>
-				<p>Компания "Мир Кровли" была основана на желании построить ведущую профессиональную кровельную компанию, которая ставит отношения с клиентами и мастерство превыше всего.</p>
+				<div data-top="4" id="single-1" class="product">
+					<span class="btn snipcart-add-item" data-item-name="Кровел" data-item-price="100" data-item-id="1" data-item-url="https://ad.mordwerg.com/#single-1">В корзину</span>
+				</div>
+				<div data-top="4" id="single-2" class="product">
+					<span class="btn snipcart-add-item" data-item-name="ПрофКровел" data-item-price="120" data-item-id="2" data-item-url="https://ad.mordwerg.com/#single-2">В корзину</span>
+				</div>
+				<p data-top="4">Компания "Мир Кровли" была основана на желании построить ведущую профессиональную кровельную компанию, которая ставит отношения с клиентами и мастерство превыше всего.</p>
 				<p>Обеспечение домов и предприятий в Удмуртии профессиональными кровельными решениями мирового класса, построенными на долгий срок!</p>
 				<a href="javascript:share();" class="mdl2" title="Поделиться"></a>
 				<a href="javascript:$(window).scrollTop($('body').offset().top);" class="mdl2" title="В начало"></a>
@@ -167,7 +178,6 @@
 			<span>©2020 Мир Кровли.<br><span>powered by Mordwerg</span></span>
 		</div>
 		<script src="libs/jquery.js"></script>
-		<script src="libs/cdn.js"></script>
 		<script src="core/ux.js"></script>
 	</body>
 </html>
