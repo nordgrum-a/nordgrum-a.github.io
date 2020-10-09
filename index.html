@@ -7,9 +7,8 @@
 		<meta name="theme-color" content="#162020">
 		<!-- Include -->
 		<link rel="stylesheet" href="core/ui.css">
-		<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">
-		<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script>
-		<div id="snipcart" data-config-add-product-behavior="none" data-api-key="YmEyNzMwMDQtYzViZS00M2Y3LWJhNmQtOTMyNmFmNzU3ODc2NjM3Mzc2ODUwODYzMzc2MzA2" hidden></div>
+		<script src="libs/jquery.js"></script>
+		<script src="core/ux.js"></script>
 		<!-- Icon -->
 		<link rel="shortcut icon" href="https://mordwerg.com/media/ico/icon.ico">
 		<link rel="apple-touch-icon" href="https://mordwerg.com/media/png/logo.png">
@@ -62,38 +61,29 @@
 					<a href="#">Кровля</a>
 				</div>
 			</div>
-			<div class="dropdown">
-				<span>Услуги <span class="mdl2"></span></span>
-				<div>
-					<a href="#">Замеры</a>
-				</div>
-			</div>
 			<a href="https://mirkrovli18.ru/about">О Нас</a>
 			<a href="https://mirkrovli18.ru/contact">Контакты</a>
 			<span class="mdl2 snipcart-customer-signin"></span>
-			<span class="mdl2 snipcart-checkout"></span>
+			<span class="mdl2 snipcart-checkout"><span class="snipcart-items-count"></span></span>
 		</nav>
 		<nav class="nav-mob">
 			<div>
-				<div>
+				<div id="nav-mob-1-c">
 					<span>Магазин</span>
 				</div>
-				<div>
+				<div id="nav-mob-2-c">
+					<span>Навигация</span>
+				</div>
+				<div id="nav-mob-3-c">
 					<span>Услуги</span>
-				</div>
-				<div>
-					<span>Контакты</span>
-				</div>
-				<div>
-					<span>Действия</span>
 				</div>
 			</div>
 			<div>
-				<span title="Страница"></span>
-				<span title="Магазин"></span>
-				<span title="Услуги"></span>
-				<span title="Контакты"></span>
-				<span title="Действия"><br><br></span>
+				<a href="https://mirkrovli18.ru/" title="Главная"></a>
+				<span id="nav-mob-1" title="Магазин" onClick="nav_mob_shop();"></span>
+				<span id="nav-mob-2" title="Навигация" onClick="nav_mob();"><br><br></span>
+				<span id="nav-mob-3" title="Контакты" onClick="nav_mob_contact();"></span>
+				<span title="Корзина" class="snipcart-checkout"><span class="snipcart-items-count"></span></span>
 			</div>
 		</nav>
 		<header>
@@ -165,19 +155,7 @@
 				<a rel="external noopener noreferrer nofollow" target="_blank" href="https://instagram.com/mirkrovli18.ru"></a>
 				<a rel="external noopener noreferrer nofollow" target="_blank" href="https://vk.com/mirkrovli18"></a>
 			</div>
-			<p>©2020 Мир Кровли.<br><q cite="https://mirkrovli18.ru/">С гордостью обслуживаем Сарапул с 2015 года.</q></p>
+			<p>©2020 Мир Кровли.<br><q cite="https://mirkrovli18.ru/">Только качественный товар с 2015 года.</q></p>
 		</footer>
-		<div class="load">
-			<div>
-				<div></div>
-				<div>
-					<div></div>
-				</div>
-				<span>Загрузка</span>
-			</div>
-			<span>©2020 Мир Кровли.<br><span>powered by Mordwerg</span></span>
-		</div>
-		<script src="libs/jquery.js"></script>
-		<script src="core/ux.js"></script>
 	</body>
 </html>

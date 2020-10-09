@@ -29,10 +29,10 @@
 .hr {height: 0.1rem; background-color: rgba(0,0,0,0.75); border-radius: 0.05rem; transition: ease-in 0.75s; transform: scale(0.25);}
 .hr.aos {transform: scale(1);}
 
-.hd {font-family: 'Segoe MDL2 Assets'; font-size: 0.75rem; text-align: center;}
-.hd::before {letter-spacing: 3rem; content: "";} .hd::after {content: "";}
+.hd {font-family: 'Segoe MDL2 Assets'; font-size: 0.5rem; text-align: center;}
+.hd::before {letter-spacing: 3rem; content: '';} .hd::after {content: '';}
 
-.hr, .hd {margin-top: 8rem; margin-bottom: 8rem;}
+.hr, .hd {margin-top: 4rem; margin-bottom: 4rem;}
 
 /*Grid*/
 .grid {display: grid; grid-gap: 1rem; padding: 1rem;}
@@ -55,7 +55,7 @@
 
 .theme {background-color: rgba(39,142,132,0.5);}
 
-.product input[type=number] {background-color: red;}
+.snipcart-items-count {display: inline-block; font-family: 'Exo 2'; font-size: 1rem; color: #278E84; margin-top: -0.5rem; margin-left: -0.875rem;}
 
 /*Breakpoints*/
 @media only screen and (max-width: 67.5rem)/*1080*/

@@ -1,6 +1,6 @@
 /*Nav*/
 footer {
-	display: grid; grid-template-areas: 'footer-img footer-p footer-div'; grid-gap: 1rem;
+	display: grid; grid-template-areas: 'footer-img footer-p footer-div'; grid-gap: 2rem 1rem;
 	background-color: #162020; color: white; margin-top: 4rem; padding: 2rem 1rem;}
 
 footer > img {float: left; height: 2rem; grid-area: footer-img;}
@@ -11,8 +11,9 @@ footer > div > a {display: inline-block; color: white; font-family: "Font Awesom
 footer > div > a:first-child {margin-left: initial;}
 footer > div > a:hover {color: rgba(255,255,255,0.75);}
 
-/*1080*/
-@media only screen and (max-width: 67.5rem) {footer {padding-bottom: 5rem;}}
+/*720*/
+@media only screen and (max-width: 45rem) {footer {padding-bottom: 5rem;}}
+
 /*600*/
 @media only screen and (max-width: 37.5rem) {
 	footer {grid-template-areas:

@@ -1,21 +1,19 @@
 //GTM
 
-//Cart
-//$('body').append('<link rel="preconnect" href="https://app.snipcart.com"><link rel="preconnect" href="https://cdn.snipcart.com">');
-//$('body').append('<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">');
-//$('body').append('<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script>');
-//$('body').append('<div hidden id="snipcart" data-api-key="<API_KEY>" data-config-add-product-behavior="none"></div>');
-document.addEventListener('snipcart.ready', () => {
-	Snipcart.api.session.setCurrency('rub');
-});
+//Cart data-config-add-product-behavior="none"
+$('head').append('<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">');
+$('body').append('<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script>');
+$('body').append('<div id="snipcart" data-api-key="YmEyNzMwMDQtYzViZS00M2Y3LWJhNmQtOTMyNmFmNzU3ODc2NjM3Mzc2ODUwODYzMzc2MzA2" hidden></div>');
+document.addEventListener('snipcart.ready', () => {Snipcart.api.session.setCurrency('rub');});
+
+//Loader
+$('body').append('<div class="load"><div><div></div><div><div></div></div><span>Загрузка</span></div><span>©2020 Мир Кровли.<br><span>powered by Mordwerg</span></span></div>');
+$(document).ready(function(){$('.load').remove(); $('body').css('overflow-y', 'initial');});
 
 //Initialization
 $('.hr').addClass('vw');
 $('[data-top]').each(function(){var top = $(this).attr('data-top'); $(this).css('margin-top', top + 'rem');});
 $('[data-right]').each(function(){var right = $(this).attr('data-right'); $(this).css('margin-right', right + 'rem');});
-
-//Load
-$(document).ready(function(){$('.load').remove(); $('body').css('overflow-y', 'initial');});
 
 //AOS else $element.removeAttr("animation");
 var $aos = $('[data-aos], .hr');
@@ -31,13 +29,18 @@ var submitted=false;
 var nps = window.pageYOffset; window.onscroll = function() {var ncs = window.pageYOffset; if (nps > ncs) {$('.nav-desktop').css({'top': '0', 'box-shadow': '0 0.125rem 0.25rem 0 rgba(0,0,0,0.125)'});} else {$('.nav-desktop').css({'top': '-3.5rem', 'box-shadow': 'initial'});} nps = ncs;}
 
 //Nav Mob
-function nav_mob_close() {$('.nav-mob > div:first-child > div').css({'height': '0', 'opacity': '0', 'pointer-events': 'none'});}
+function nav_mob_shop() {
+	nav_mob_close(); $('body').css('overflow-y', 'hidden'); $('#nav-mob-1-c').addClass('nav-mob-active'); $('#nav-mob-1').attr('onClick','nav_mob_close();');}
+function nav_mob() {
+	nav_mob_close(); $('body').css('overflow-y', 'hidden'); $('#nav-mob-2-c').addClass('nav-mob-active'); $('#nav-mob-2').html(''); $('#nav-mob-2').css({'font-size': '1.25rem', 'line-height': 'initial', 'letter-spacing': 'initial', 'margin-left': '0.3rem'}); $('#nav-mob-2').attr('onClick','nav_mob_close();');}
+function nav_mob_contact() {
+	nav_mob_close(); $('body').css('overflow-y', 'hidden'); $('#nav-mob-3-c').addClass('nav-mob-active'); $('#nav-mob-3').attr('onClick','nav_mob_close();');}
 
-$('.nav-mob > div:last-child > span:nth-of-type(1)').click(function(){nav_mob_close();});
-$('.nav-mob > div:last-child > span:nth-of-type(2)').click(function(){nav_mob_close(); $('.nav-mob > div:first-child > div:nth-child(1)').css({'height': '100vh', 'opacity': '1', 'pointer-events': 'initial'});});
-$('.nav-mob > div:last-child > span:nth-of-type(3)').click(function(){nav_mob_close(); $('.nav-mob > div:first-child > div:nth-child(2)').css({'height': '100vh', 'opacity': '1', 'pointer-events': 'initial'});});
-$('.nav-mob > div:last-child > span:nth-of-type(4)').click(function(){nav_mob_close(); $('.nav-mob > div:first-child > div:nth-child(3)').css({'height': '100vh', 'opacity': '1', 'pointer-events': 'initial'});});
-$('.nav-mob > div:last-child > span:nth-of-type(5)').click(function(){nav_mob_close(); $('.nav-mob > div:first-child > div:nth-child(4)').css({'height': '100vh', 'opacity': '1', 'pointer-events': 'initial'});});
+function nav_mob_close() {
+	$('body').css('overflow-y', 'initial'); $('.nav-mob > div:first-child > div').removeClass('nav-mob-active');
+	$('#nav-mob-1').attr('onClick','nav_mob_shop();');
+	$('#nav-mob-2').attr('onClick','nav_mob();'); $('#nav-mob-2').html('<br><br>'); $('#nav-mob-2').css({'font-size': '0.625rem', 'line-height': '0.425rem', 'letter-spacing': '-0.2rem', 'margin-left': 'initial'});
+	$('#nav-mob-3').attr('onClick','nav_mob_contact();');}
 
 //Nav
 function totop() {$(window).scrollTop($('body').offset().top);}
