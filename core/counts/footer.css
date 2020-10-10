@@ -1,7 +1,7 @@
 /*Nav*/
 footer {
 	display: grid; grid-template-areas: 'footer-img footer-p footer-div'; grid-gap: 2rem 1rem;
-	background-color: #162020; color: white; margin-top: 4rem; padding: 2rem 1rem;}
+	background-color: #162020; color: white; padding: 2rem 1rem;}
 
 footer > img {float: left; height: 2rem; grid-area: footer-img;}
 footer > p {grid-area: footer-p; font-size: 1rem; height: 2rem;}

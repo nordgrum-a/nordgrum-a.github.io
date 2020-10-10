@@ -3,8 +3,10 @@
 [data-aos=zoom-in].aos {transform: scale(0); opacity: 0; animation-name: zoom-in;}
 @keyframes zoom-in {87.5% {transform: scale(1.125); opacity: 1;} 100% {transform: scale(1); opacity: 1;}}
 
-[data-aos=flip-360].aos {animation-name: flip-360; transform: perspective(37.5rem) rotateY(0deg);}
-@keyframes flip-360 {100% {transform: perspective(37.5rem) rotateY(360deg);}}
+[data-aos=flip-left].aos {animation-name: flip-left; transform: perspective(37.5rem) rotateY(-90deg);}
+@keyframes flip-left {100% {transform: perspective(37.5rem) rotateY(0deg);}}
+[data-aos=flip-right].aos {animation-name: flip-right; transform: perspective(37.5rem) rotateY(90deg);}
+@keyframes flip-right {100% {transform: perspective(37.5rem) rotateY(0deg);}}
 
 [data-aos=scalex].aos {animation-name: scalex; transform: scaleX(0);}
 @keyframes scalex {100% {transform: scaleX(1);}}

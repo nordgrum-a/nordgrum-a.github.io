@@ -1,19 +1,25 @@
 //GTM
 
-//Cart data-config-add-product-behavior="none"
-$('head').append('<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">');
-$('body').append('<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script>');
-$('body').append('<div id="snipcart" data-api-key="YmEyNzMwMDQtYzViZS00M2Y3LWJhNmQtOTMyNmFmNzU3ODc2NjM3Mzc2ODUwODYzMzc2MzA2" hidden></div>');
-document.addEventListener('snipcart.ready', () => {Snipcart.api.session.setCurrency('rub');});
-
 //Loader
 $('body').append('<div class="load"><div><div></div><div><div></div></div><span>Загрузка</span></div><span>©2020 Мир Кровли.<br><span>powered by Mordwerg</span></span></div>');
 $(document).ready(function(){$('.load').remove(); $('body').css('overflow-y', 'initial');});
 
 //Initialization
+//setTimeout(function() {scroll_p();}, 45000);
 $('.hr').addClass('vw');
 $('[data-top]').each(function(){var top = $(this).attr('data-top'); $(this).css('margin-top', top + 'rem');});
 $('[data-right]').each(function(){var right = $(this).attr('data-right'); $(this).css('margin-right', right + 'rem');});
+
+var scroll_time = 60000;
+if ($(window).width() < 720) {
+	$('#why-us [data-aos]').attr('data-aos','zoom-in');
+	var scroll_time = 90000;
+}
+
+//Cart data-config-add-product-behavior="none"
+$('head').append('<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">');
+$('body').append('<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script><div id="snipcart" data-api-key="YmEyNzMwMDQtYzViZS00M2Y3LWJhNmQtOTMyNmFmNzU3ODc2NjM3Mzc2ODUwODYzMzc2MzA2" hidden></div>');
+document.addEventListener('snipcart.ready', () => {Snipcart.api.session.setCurrency('rub');});
 
 //AOS else $element.removeAttr("animation");
 var $aos = $('[data-aos], .hr');
@@ -44,14 +50,15 @@ function nav_mob_close() {
 
 //Nav
 function totop() {$(window).scrollTop($('body').offset().top);}
-function tobottom() {$(window).scrollTop($('footer p').offset().top);}
+function tobottom() {$(window).scrollTop($('footer').offset().top);}
 
 //Demonstration
 $('body').append('<a class="stop-demo mdl2" href="javascript:scroll_p();"></a>');
-$('footer').after('<audio src="https://mirkrovli18.ru/media/mp3/music.mp3" loop></audio>');
+$('footer').after('<audio src="media/mp3/music.mp3" loop></audio>');
 
 var audio = $('audio[loop]'); var elem = document.querySelector('html, body');
-function scroll() {audio.trigger('play'); audio.prop('volume', 0.375); $('.stop-demo').css('top', '2rem'); $('html').css('scroll-behavior', 'auto'); $('html, body').animate({scrollTop: $('footer p').offset().top}, 90000); toggleFullScreen(elem);}
+
+function scroll() {audio.currentTime = 0; audio.trigger('play'); audio.prop('volume', 0.5); $('.stop-demo').css('top', '2rem'); $('html').css('scroll-behavior', 'auto'); $('html, body').animate({scrollTop: $('footer').offset().top}, scroll_time); toggleFullScreen(elem);}
 
 function scroll_p() {audio.trigger('pause'); $('.stop-demo').css('top', '-10rem'); $('html').css('scroll-behavior', 'smooth'); $('html, body').queue([]).stop(); toggleFullScreen(elem);}
 

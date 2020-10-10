@@ -1,5 +1,5 @@
 /*Desktop*/
-.nav-desktop {display: inline-block; width: 100%; height: 3.5rem; position: sticky; z-index: 2; box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.125); text-align: left; transition: ease-in-out 0.5s;}
+.nav-desktop {display: inline-block; width: 100%; height: 3.5rem; position: sticky; z-index: 3; box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.125); text-align: left; transition: ease-in-out 0.5s;}
 .nav-desktop, .nav-mob, .dropdown > div {background-color: rgba(255,255,255,0.95);}
 
 .nav-desktop > a:first-child {display: inline-block; padding: 0.5rem 1rem;}
@@ -17,16 +17,15 @@
 .dropdown > span > .mdl2 {font-size: 0.75rem; line-height: 1.25rem; transition: ease-in-out 0.25s;}
 .dropdown > span:hover > .mdl2 {transform: rotateX(180deg);}
 
-.nav-desktop > .mdl2 {float: right; padding: 1.125rem;}
+.nav-desktop > .mdl2 {float: right; padding: 1.125rem; cursor: pointer;}
 
 /*Mobile*/
-.nav-mob {display: none; z-index: 2; position: fixed; left: 0; bottom: 0; width: 100%;}
+.nav-mob {display: none; z-index: 3; position: fixed; left: 0; bottom: 0; width: 100%;}
 .nav-mob > div:first-child > div {display: inline-block; width: 100%; height: 0; opacity: 0; pointer-events: none; transition: ease-in-out 0.375s;}
 
 .nav-mob > div:last-child {display: grid; grid-template-columns: auto auto auto auto auto; box-shadow: 0 -0.125rem 0.25rem 0 rgba(0,0,0,0.125);}
 .nav-mob > div:last-child > * {color: black; font-family: 'Segoe MDL2 Assets'; font-size: 1.25rem; padding: 1rem; padding-left: 0.5rem; transition: ease-in-out 0.25s;}
-.nav-mob > div:last-child > *:hover {font-size: 1.75rem; padding: 0.75rem;}
-#nav-mob-2 {font-size: 0.625rem; line-height: 0.425rem; letter-spacing: -0.2rem; width: 2.75}
+#nav-mob-2 {font-size: 0.625rem; line-height: 0.425rem; letter-spacing: -0.2rem; width: 2.75;}
 
 .nav-mob > div:first-child > div.nav-mob-active {
 	height: 92vh; opacity: 1; pointer-events: initial; padding: 4rem 1rem; overflow-y: auto;}

@@ -7,8 +7,6 @@
 		<meta name="theme-color" content="#162020">
 		<!-- Include -->
 		<link rel="stylesheet" href="core/ui.css">
-		<script src="libs/jquery.js"></script>
-		<script src="core/ux.js"></script>
 		<!-- Icon -->
 		<link rel="shortcut icon" href="https://mordwerg.com/media/ico/icon.ico">
 		<link rel="apple-touch-icon" href="https://mordwerg.com/media/png/logo.png">
@@ -63,8 +61,8 @@
 			</div>
 			<a href="https://mirkrovli18.ru/about">О Нас</a>
 			<a href="https://mirkrovli18.ru/contact">Контакты</a>
-			<span class="mdl2 snipcart-customer-signin"></span>
-			<span class="mdl2 snipcart-checkout"><span class="snipcart-items-count"></span></span>
+			<span title="Аккаунт" class="mdl2 snipcart-customer-signin"></span>
+			<span title="Корзина" class="mdl2 snipcart-checkout"><span class="snipcart-items-count"></span></span>
 		</nav>
 		<nav class="nav-mob">
 			<div>
@@ -86,33 +84,34 @@
 				<span title="Корзина" class="snipcart-checkout"><span class="snipcart-items-count"></span></span>
 			</div>
 		</nav>
+		<div class="actions">
+			<a href="javascript:$(window).scrollTop($('body').offset().top);" class="mdl2" title="В начало"></a>
+			<a href="javascript:scroll();" class="mdl2"></a>
+			<a href="javascript:share();" class="mdl2" title="Поделиться"></a>
+			<a href="javascript:$(window).scrollTop($('footer').offset().top);" class="mdl2" title="В конец"></a>
+		</div>
 		<header>
 			<picture>
 				<source type="image/webp" srcset="media/webp/header.webp">
 				<source type="image/png" srcset="media/png/header.png">
-				<img class="fw" src="media/png/header.png" alt="Мягкая кровля - лучшее решение для вашего дома!">
+				<img class="fw" src="media/png/header.png" alt="Только качественный товар в Сарапуле с 2015 года">
 			</picture>
 			<!--<video class="fw" autoplay loop muted playsinline src="media/mp4/hero.mp4"></video>-->
 			<div class="center theme">
 				<div class="center-c">
-					<span data-aos="zoom-in" data-aos-dur="2" class="dib">С гордостью обслуживаем Сарапул<br>с 2015 года</span>
+					<span data-aos="move-right" data-aos-dur="1.5" class="dib ta-l">Только качественный товар<br>с 2015 года</span>
 				</div>
 			</div>
 		</header>
 		<section>
 			<div class="vw">
-				<h1 data-top="4">Профессиональная Кровельная Компания</h1>
+				<h1 data-top="4">Покрытия для крыши</h1>
 				<div data-top="4" id="single-1" class="product">
-					<span class="btn snipcart-add-item" data-item-name="Кровел" data-item-price="100" data-item-id="1" data-item-url="https://ad.mordwerg.com/#single-1">В корзину</span>
-				</div>
-				<div data-top="4" id="single-2" class="product">
-					<span class="btn snipcart-add-item" data-item-name="ПрофКровел" data-item-price="120" data-item-id="2" data-item-url="https://ad.mordwerg.com/#single-2">В корзину</span>
+					<span class="snipcart-add-item" data-item-name="Кровел" data-item-price="100" data-item-id="1" data-item-url="https://ad.mordwerg.com/#single-1">в корзину</span>
 				</div>
 				<p data-top="4">Компания "Мир Кровли" была основана на желании построить ведущую профессиональную кровельную компанию, которая ставит отношения с клиентами и мастерство превыше всего.</p>
 				<p>Обеспечение домов и предприятий в Удмуртии профессиональными кровельными решениями мирового класса, построенными на долгий срок!</p>
-				<a href="javascript:share();" class="mdl2" title="Поделиться"></a>
-				<a href="javascript:$(window).scrollTop($('body').offset().top);" class="mdl2" title="В начало"></a>
-				<a href="javascript:$(window).scrollTop($('footer').offset().top);" class="mdl2" title="В конец"></a>
+				
 			</div>
 			<div class="hd"></div>
 			<div class="grid grid-col-2 grid-gap-4">
@@ -148,6 +147,38 @@
 				<source type="image/png" srcset="media/png/insulation/insulation-2.png">
 				<img data-top="4" class="p-1 mw" src="media/png/insulation/insulation-2.png" alt="Правильное утепление кровли, чтобы крыша служила долго!">
 			</picture>
+			<div id="why-us">
+				<h2>Почему выбирают нас</h2>
+				<div class="grid grid-col-3">
+					<div data-aos="flip-right">
+						<div>
+							<div>
+								<img src="media/svg/features/white/free-storage.svg" alt="Бесплатное хранение в Сарапуле - Мир Кровли">
+							</div>
+						</div>
+						<h3>Бесплатное хранение</h3>
+						<p>Покупайте гибкую кровлю тогда, когда вам удобно. Оставляйте ее на хранение и забирайте непосредственно перед укладкой кровли!</p>
+					</div>
+					<div data-aos="zoom-in" data-aos-dur="1">
+						<div>
+							<div>
+								<img src="media/svg/features/white/refund.svg" alt="Возврат остатков в Сарапуле - Мир Кровли">
+							</div>
+						</div>
+						<h3>Возврат остатков</h3>
+						<p>Вы можете вернуть нам остатки кровли в течение 60 дней. Мы вернем вам 100% стоимости!</p>
+					</div>
+					<div data-aos="flip-left">
+						<div>
+							<div>
+								<img src="media/svg/features/white/measure.svg" alt="Бесплатный замер в Сарапуле - Мир Кровли">
+							</div>
+						</div>
+						<h3>Бесплатный замер</h3>
+						<p>Наши замерщики приедут и произведут замеры вашей крыши абсолютно бесплатно по всей Удмуртии.</p>
+					</div>
+				</div>
+			</div>
 		</section>
 		<footer>
 			<img src="media/svg/white.svg" alt="Мир Кровли. Выбор людей с 2015 года.">
@@ -157,5 +188,7 @@
 			</div>
 			<p>©2020 Мир Кровли.<br><q cite="https://mirkrovli18.ru/">Только качественный товар с 2015 года.</q></p>
 		</footer>
+		<script src="libs/jquery.js"></script>
+		<script src="core/ux.js"></script>
 	</body>
 </html>
