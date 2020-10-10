@@ -16,9 +16,9 @@ if ($(window).width() < 720) {
 	var scroll_time = 90000;
 }
 
-//Cart data-config-add-product-behavior="none"
+//Cart
 $('head').append('<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.css">');
-$('body').append('<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script><div id="snipcart" data-api-key="YmEyNzMwMDQtYzViZS00M2Y3LWJhNmQtOTMyNmFmNzU3ODc2NjM3Mzc2ODUwODYzMzc2MzA2" hidden></div>');
+$('body').append('<script async src="https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js"></script><div id="snipcart" data-api-key="YmEyNzMwMDQtYzViZS00M2Y3LWJhNmQtOTMyNmFmNzU3ODc2NjM3Mzc2ODUwODYzMzc2MzA2" hidden data-config-add-product-behavior="none"></div><div class="cart-added"><span>добавлено</span><span></span></div>');
 document.addEventListener('snipcart.ready', () => {Snipcart.api.session.setCurrency('rub');});
 
 //AOS else $element.removeAttr("animation");
@@ -41,6 +41,8 @@ function nav_mob() {
 	nav_mob_close(); $('body').css('overflow-y', 'hidden'); $('#nav-mob-2-c').addClass('nav-mob-active'); $('#nav-mob-2').html(''); $('#nav-mob-2').css({'font-size': '1.25rem', 'line-height': 'initial', 'letter-spacing': 'initial', 'margin-left': '0.3rem'}); $('#nav-mob-2').attr('onClick','nav_mob_close();');}
 function nav_mob_contact() {
 	nav_mob_close(); $('body').css('overflow-y', 'hidden'); $('#nav-mob-3-c').addClass('nav-mob-active'); $('#nav-mob-3').attr('onClick','nav_mob_close();');}
+$('.nav-mob .snipcart-checkout').click(function(){nav_mob_close();});
+$('.snipcart-add-item').click(function(){$('.cart-added').css('animation','cart-added 2s ease-in-out'); setTimeout(function() {$('.cart-added').css('animation','initial');}, 2000);});
 
 function nav_mob_close() {
 	$('body').css('overflow-y', 'initial'); $('.nav-mob > div:first-child > div').removeClass('nav-mob-active');

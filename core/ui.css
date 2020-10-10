@@ -28,7 +28,7 @@ body {overflow-x: hidden; overflow-y: hidden; background-color: white;}
 /*Global*/
 header {position: relative; overflow: hidden;}
 nav {font-size: 0;}
-section, article, footer {overflow-x: hidden;}
+section, article, footer {overflow-x: hidden; font-size: 0;}
 
 h1 {font-size: 1.375rem; letter-spacing: 0.375rem;}
 h2 {font-size: 1.25rem; letter-spacing: 0.25rem;}
@@ -41,7 +41,7 @@ a {text-decoration: none; color: rgba(0,0,0,0.75);} a:hover {color: black;}
 
 mark {background: linear-gradient(transparent 60%,rgba(72,205,196,0.125) 40%);}
 
-ul {list-style-type: none; padding-left: 0rem; margin: 0rem; text-align: left;}
+ul {list-style-type: none; padding-left: 0rem; text-align: left;}
 
 iframe {width: 0; height: 0; display: none; visibility: hidden;}
 video {} audio {display: none;}

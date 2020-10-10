@@ -51,7 +51,7 @@
 
 .center {position: absolute; width: 100%; height: 100%; z-index: 1; top: 0; left: 0;}
 .center-c {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; padding: 1rem;}
-.center-c span {color: white; font-size: 6.25vw; text-shadow: 0 0.0875rem 0.375rem rgba(0,0,0,0.375);}
+.center-c span {color: white; font-size: 6.5vw; text-shadow: 0 0.0875rem 0.375rem rgba(0,0,0,0.375);}
 
 .theme {background-color: rgba(39,142,132,0.375);}
 
@@ -64,16 +64,30 @@
 .snipcart-add-item {
 	cursor: pointer; display: inline-block; padding: 1rem 1.5rem; border-radius: 0.125rem;
 	color: white; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.375rem; font-weight: bold;
-	background: linear-gradient(215deg, #48CDC4, #278E84 75%);}
+	background: linear-gradient(215deg, #48CDC4, #278E84 75%); transition: ease-in-out 0.375s;}
+.snipcart-add-item:hover {background: linear-gradient(215deg, #48CDC4, #278E84 200%)}
 .snipcart-featured-payment-methods {display: none !important;}
 
 #why-us {padding: 4rem 0; background: linear-gradient(transparent 50%,#278E84 50%);}
 #why-us .grid {margin-top: 3rem; grid-gap: 4rem 2rem;}
-#why-us .grid > div {display: inline-block; width: 18rem; height: 26rem; padding: 2rem 1rem; box-shadow: 0 0.25rem 1rem 0 rgba(0,0,0,0.25); border-radius: 2rem; background-color: white;}
+#why-us .grid > div {display: inline-block; width: 18rem; height: 26rem; padding: 2rem 1rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.25); border-radius: 2rem; background-color: white;}
 #why-us .grid > div > div {display: inline-block; background-color: rgba(39,142,132,0.125); width: 12rem; height: 12rem; padding: 2rem; border-radius: 50%;}
 #why-us .grid > div > div > div {display: inline-block; padding: 2rem; width: 8rem; height: 8rem; background-color: #278E84; border-radius: 50%;}
 #why-us .grid h3 {margin-top: 2rem; margin-bottom: 1rem;}
 #why-us .grid p {text-align: left;}
+
+.shop {grid-gap: 4rem 1rem;}
+.shop > ul {display: inline-block; width: 14rem; background-color: white; padding: 1rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.25); border-radius: 0.125rem;}
+.shop li {width: 100%;}
+.shop li:nth-of-type(2) {color: #278E84; font-size: 1.5rem; margin: 0.75rem 0;}
+.shop li:nth-of-type(3) {font-weight: bold;}
+.shop li.snipcart-add-item {text-align: center; margin-top: 1rem;}
+
+.cart-added {z-index: 2; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(0); width: 16rem; height: 16rem; background-color: rgba(39,142,132,0.75); padding-top: 2.5rem; border-radius: 2rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.25); pointer-events: none; opacity: 0;}
+.cart-added span {display: block; color: white;}
+.cart-added span:nth-of-type(1) {font-weight: bold; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.625rem; padding-left: 0.625rem;}
+.cart-added span:nth-of-type(2) {font-family: "Segoe MDL2 Assets"; font-size: 8rem; margin-top: 2rem;}
+@keyframes cart-added {37.5% {transform: translate(-50%,-50%) scale(1); opacity: 1;} 75.5% {transform: translate(-50%,-50%) scale(1); opacity: 1;} 99.9% {transform: translate(-50%,-50%) scale(2); opacity: 0;} 100% {transform: translate(-50%,-50%) scale(0);}}
 
 /*
 
@@ -86,7 +100,7 @@ background: radial-gradient(farthest-side,rgba(39,142,132,0.125) 100%, transpare
 /*Breakpoints*/
 @media only screen and (max-width: 67.5rem)/*1080*/
 {
-	.vw {width: 70%;} .grid-col-6 {grid-template-columns: auto auto auto auto;}
+	.vw {width: 70%;} .grid-col-4 {grid-template-columns: auto auto auto;} .grid-col-6 {grid-template-columns: auto auto auto auto;}
 }
 @media only screen and (max-width: 60rem)/*960*/
 {
@@ -105,8 +119,8 @@ background: radial-gradient(farthest-side,rgba(39,142,132,0.125) 100%, transpare
 @media only screen and (max-width: 37.5rem)/*600*/
 {
 	.vw {width: 90%;}
-	.grid-col-2 {grid-template-columns: auto;}
-	.grid-col-4, .grid-col-6 {grid-template-columns: auto auto;}
+	.grid-col-6 {grid-template-columns: auto auto;}
+	.grid-col-2, .grid-col-4 {grid-template-columns: auto;}
 }
 @media only screen and (max-width: 32rem)/*512*/
 {
@@ -118,5 +132,5 @@ background: radial-gradient(farthest-side,rgba(39,142,132,0.125) 100%, transpare
 }
 @media only screen and (max-width: 26.25rem)/*420*/
 {
-	.grid-col-4, .grid-col-6 {grid-template-columns: auto;}
+	.grid-col-6 {grid-template-columns: auto;}
 }
