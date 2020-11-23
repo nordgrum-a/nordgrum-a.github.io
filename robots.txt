@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /legal/
 
-Sitemap: https://mordwerg.com/sitemap.xml
+Sitemap: https://electro-point.net/sitemaps.xml

@@ -1,0 +1,101 @@
+/*Modules*/
+@import url('ui/header.css'); @import url('ui/nav.css'); @import url('ui/footer.css');
+@import url('ui/load.css'); @import url('ui/cursor.css');
+
+/*Features*/
+@import url('ui/shop.css'); @import url('ui/class.css');
+
+/*Fonts*/
+@font-face {font-family: 'EP'; src: url('../libs/fonts/EPL.woff2'); font-weight: 300;}
+@font-face {font-family: 'EP'; src: url('../libs/fonts/EP.woff2');}
+@font-face {font-family: 'EP'; src: url('../libs/fonts/EPB.woff2'); font-weight: bold;}
+
+@font-face {font-family: 'EPc'; src: url('../libs/fonts/EPcL.woff2'); font-weight: 300;}
+@font-face {font-family: 'EPc'; src: url('../libs/fonts/EPc.woff2');}
+@font-face {font-family: 'EPc'; src: url('../libs/fonts/EPcB.woff2'); font-weight: bold;}
+
+* {box-sizing: border-box; vertical-align: top; border: initial; margin: initial; padding: initial; outline: initial; font-family: 'EP', Sans-Serif; cursor: none;}
+:hover, :focus, :after, :before {outline: initial;}
+
+html {text-align: center; scroll-behavior: smooth;}
+body {background-color: #f0f0f0; overflow: hidden; display: grid; grid-template-columns: 16rem auto 4rem;
+	grid-template-areas:
+	'left header header'
+	'left content right';
+}
+
+main {grid-area: content;}
+footer {grid-area: footer;}
+
+h1 {font-size: 1.5rem; letter-spacing: 0.15rem;}
+h2 {font-size: 1.25rem; letter-spacing: 0.125rem;}
+h3 {font-size: 1rem; letter-spacing: 0.1rem;}
+
+a, p, q, li, span, address, input, output, textarea, label, td {font-size: 1rem; letter-spacing: 0.0625rem;}
+
+p {line-height: 1.25rem;}
+p a {padding-bottom: 0.25rem; color: rgba(255,255,255,0.75); border-bottom: solid 0.1rem rgba(255,255,255,0.75); border-top: solid 0.1rem rgba(255,255,255,0.75); border-radius: 0.25rem;} p a:hover {color: rgba(111,222,222,0.9); border-color: transparent;}
+p .btn {border: initial;}
+
+a {color: black; text-decoration: none;} a:hover {color: rgba(111,222,222,0.9);}
+a.link {color: black; border-bottom: initial; pointer-events: none;} a.link:hover {color: black;}
+
+input[type=reset], input[type=submit], input[type=button] {cursor: pointer;}
+
+th {font-weight: normal;}
+
+address {font-style: normal;} p address {display: inline;}
+q {font-style: italic;}
+mark {background: linear-gradient(transparent 60%,rgba(111,222,222,0.25) 40%);}
+
+iframe {width: 0; height: 0; display: none; visibility: hidden;}
+
+ul {list-style-type: none;}
+
+audio {display: none;}
+
+ol a {color: rgba(0,0,0,0.75); border-bottom: 0.075rem dotted rgba(0,0,0,0.75);}
+ol a:hover {color: black; border-bottom-color: black;}
+
+fieldset
+{
+	display: inline-block; width: auto; max-width: 100%; padding: 1rem 0; margin-top: 0.25rem;
+	border: solid 0.1rem rgba(0,0,0,0); border-radius: 0.25rem; animation: 2s fieldset linear infinite;
+}
+@keyframes fieldset {
+	0% {border-color: rgba(0,0,0,0);}
+	25% {border-top-color: rgba(0,0,0,0.75); border-left-color: rgba(0,0,0,0); border-right-color: rgba(0,0,0,0); border-bottom-color: rgba(0,0,0,0);}
+	50% {border-top-color: rgba(0,0,0,0); border-left-color: rgba(0,0,0,0.75); border-right-color: rgba(0,0,0,0.75); border-bottom-color: rgba(0,0,0,0);}
+	75% {border-left-color: rgba(0,0,0,0); border-right-color: rgba(0,0,0,0); border-bottom-color: rgba(0,0,0,0.75);}
+	100% {border-color: rgba(0,0,0,0);}
+}
+
+legend {font-weight: 700; letter-spacing: 0.4375rem; padding: 0 0.75rem; margin: auto; text-transform: uppercase;}
+
+fieldset ol {text-align: left; margin: 0.75rem; margin-left: initial;}
+fieldset li:first-child {padding-top: initial;}
+fieldset li {padding: 0.75rem;}
+
+/*article*/
+[pbl] {border-left: solid 0.25rem #6FDEDE; margin-left: 1rem; margin-top: 1.5rem; margin-right: 1rem; background-color: rgba(111,222,222,0.05);} [pbl] > p {text-align: left; padding: 0.5rem 1rem; margin-top: initial;}
+
+/*Transition*/
+a, input, output {transition: ease-in-out 0.375s;}
+
+/*Animations*/
+@keyframes share {50% {transform: scale(1.125);}}
+@keyframes stop {0% {} 50% {filter: invert(100%);} 100% {}}
+@keyframes noise {0% {background-position: 50%,50%} 50% {background-position: 45%,55%} 100% {background-position: 50%,50%}}
+
+@media (prefers-color-scheme: dark) {
+	a {fill: #000000;}
+}
+/*@media (prefers-color-scheme: light) {path {fill: #000000;}}*/
+
+/*Breakpoints*/
+@media only screen and (max-width: 720px) {
+	body {grid-template-columns: auto 4rem; grid-template-areas:
+		'header header'
+		'content right';}
+	* {cursor: initial;}
+}

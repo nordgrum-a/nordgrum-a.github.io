@@ -1,0 +1,65 @@
+.nav {
+	display: grid; width: calc(100% - 20rem); height: calc(100% - 4rem);
+	z-index: 3; position: fixed; bottom: 0; left: -125%;
+	background-color: #f0f0f0; padding: 2rem; overflow-y: auto; transition: ease-in-out 0.375s;
+	grid-gap: 2rem; grid-template-areas:
+		'nav-1 nav-2'
+		'nav-3 nav-2';
+}
+
+.nav li {transition: ease-in-out 0.375s;}
+.nav li a span {display: inline-block; font-family: 'Segoe MDL2 Assets'; font-size: 1.5rem; transition: ease-in-out 0.375s;}
+
+/*Nav-1*/
+.nav-1 {grid-area: nav-1; text-align: left;}
+.nav-1 li:first-of-type {padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 0.075rem solid rgba(0,0,0,0.25); letter-spacing: 0.5rem; text-transform: uppercase; text-align: center;}
+
+.nav-1 li a {display: inline-block; letter-spacing: 0.1rem; padding: 0.5rem 0;}
+.nav-1 li a span {display: inline-block; margin-right: 1rem; line-height: 1.25rem;}
+.nav-1 li a:hover, .nav-1 li a:hover span {letter-spacing: 0.4rem; color: #6FDEDE;}
+
+/*Nav-2*/
+.nav-2 {grid-area: nav-2;}
+.nav-2 li:first-of-type {padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 0.075rem solid rgba(0,0,0,0.25); letter-spacing: 0.5rem; text-transform: uppercase; text-align: center; height: initial; background-color: initial;}
+.nav-2 li:first-of-type:hover {background-color: initial;}
+
+.nav-2 li {height: 6.5rem; background-color: rgba(111,222,222,0.0625); margin-bottom: 0.5rem;}
+.nav-2 li:hover {background-color: rgba(111,222,222,0.125);}
+.nav-2 li a {display: inline-block; width: 100%; height: 100%; padding: 0.5rem;}
+.nav-2 li a span {display: block; font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;}
+
+/*
+Nav-3
+grid-template-columns: repeat(3, minmax(0, 1fr));
+*/
+.nav-3 {grid-area: nav-3; display: grid;  grid-gap: 0.5rem; padding-bottom: 1rem; grid-template-areas:
+		'nav-3t nav-3t'
+		'nav-3i-1 nav-3i-3'
+		'nav-3i-2 nav-3i-4';}
+.nav-3 li:first-of-type {grid-area: nav-3t; padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 0.075rem solid rgba(0,0,0,0.25); letter-spacing: 0.5rem; text-transform: uppercase; text-align: center; height: 2rem; background-color: initial;}
+.nav-3 li:first-of-type:hover {background-color: initial;}
+
+.nav-3 li:nth-of-type(2) {grid-area: nav-3i-1;}
+.nav-3 li:nth-of-type(3) {grid-area: nav-3i-2;}
+.nav-3 li:nth-of-type(4) {grid-area: nav-3i-3;}
+.nav-3 li:nth-of-type(5) {grid-area: nav-3i-4;}
+.nav-3 li {height: 6.5rem; background-color: rgba(111,222,222,0.0625);}
+.nav-3 li:hover {background-color: rgba(111,222,222,0.125);}
+.nav-3 li a {display: inline-block; width: 100%; height: 100%; padding: 0.5rem;}
+.nav-3 li a span {display: block; font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;}
+
+/*Page Nav*/
+
+
+@media only screen and (max-width: 1080px) {
+	.nav {grid-template-areas:
+			'nav-1'
+			'nav-2'
+			'nav-3';}
+}
+@media only screen and (max-width: 720px) {
+	.nav {width: 100%; height: calc(100% - 4rem); padding: 1.5rem 1rem; grid-gap: 4rem; background-color: rgba(32,32,32,0.975);}
+	.nav-3 li {height: 6rem;}
+	.nav-3 li a {padding: 0.75rem;}
+	.nav-3 li a span {margin-top: initial; margin-bottom: 1rem;}
+}
