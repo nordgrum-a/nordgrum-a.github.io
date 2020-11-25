@@ -86,8 +86,11 @@ footer p {padding: 1.5rem 0;}
 .swiper-button-prev {background-color: #6FDEDE; color: black;}
 .swiper-button-next {background-color: black; color: #6FDEDE;}
 
+.swiper-scrollbar {transform: rotate(90deg) translate(4rem,6rem);}
+
 @media only screen and (max-width: 720px) {
     .swiper-container {width: calc(100vw - 2rem);}
+    .swiper-scrollbar {transform: initial;}
     .right > div {position: absolute; width: 2rem;}
     header > div {position: absolute; top: 0; right: 0;}
 }
