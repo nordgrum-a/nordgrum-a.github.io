@@ -46,10 +46,6 @@ if ($(window).width() < 720) {window.onscroll = function() {var ncs = window.pag
 function nav() {$('header > div').addClass('active').attr('onclick', 'nav_c();'); $('header, header > nav').addClass('active');}
 function nav_c() {$('header > div').removeClass('active').attr('onclick', 'nav();'); $('header, header > nav').removeClass('active');}
 
-//Demo
-$('body').append('<a class="stop-demo" href="javascript:scroll_p();"></a>');
-$('footer').after('<audio src="https://electro-point.net/media/mp3/music.mp3" loop></audio>');
-
 //Global
 $('.hr').addClass('vw');
 $('[data-top]').each(function(){var top = $(this).attr('data-top'); $(this).css('margin-top', top + 'rem');});
